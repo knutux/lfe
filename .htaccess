@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule page/editors/(.+)$ index.php?c=XXX [QSA,L]
