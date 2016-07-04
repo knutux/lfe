@@ -1,0 +1,17 @@
+<?php
+
+define ('DB_HOST', "localhost");
+define ('DB_NAME', "db");
+define ('DB_USER', "user");
+define ('DB_PASS', "pwd");
+
+define ("AUTHENTICATION_MAX_ATTEMPTS", 3);
+define ("AUTHENTICATION_TIMEOUT", 10); // timeout (in minutes) after last action
+define ("AUTHENTICATION_MAX_ACTIVE_SESSIONS", 3); // maximum active sessions for the single user
+define ("AUTHENTICATION_BLOCK_MINUTES", 60);
+define ("AUTHENTICATION_BLOCK_MULTIPLIER", 2); // if >1, after each successive failed attempt double block time
+define ("AUTHENTICATION_NOTIFY_MULTIPLE_SESSIONS", false); // notify user if he already has another active session open
+
+define ("AUTHENTICATION_NOTIFY_MAIL_FROM", "elevenapi@host.com");
+
+define ("TEMPLATES_DIR", __DIR__."/../templates/");

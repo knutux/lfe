@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<?php $model = $data['model']; ?>
+<HTML>
+<HEAD>
+    <TITLE><?=$model->title?></TITLE>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php foreach ($model->meta as $mparam => $mvalue): ?>
+    <META <?= "refresh"==$mparam ? 'http-equiv' : 'NAME'?>="<?=$mparam?>" CONTENT="<?=$mvalue?>">
+<?php endforeach; ?>
+<?php foreach($model->css as $css): ?>
+    <LINK rel="stylesheet" href="<?=$css?>" type="text/css">
+<?php endforeach; ?>
+{assign var=canonical value=$context->getCanonicalUrl($this)}
+{if $canonical}
+    <link rel="canonical" href="{$canonical}" />
+{/if}
+{foreach from=$context->getScriptFiles() item=js}
+    <script language="JavaScript" src="{$js}" type="text/javascript"></script>
+{/foreach}
+    <link rel="SHORTCUT ICON" href="{$smarty.const.FAVICON}"/>
+</HEAD>
+<BODY>
+<!-- end of TPL: <?=__FILE__?> -->

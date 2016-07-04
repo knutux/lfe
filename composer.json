@@ -1,0 +1,13 @@
+{
+    "require": {
+        "slim/slim": "3.*",
+        "phpmailer/phpmailer": "5.*",
+        "icyapril/cryptolib": "dev-master",
+        "slim/php-view": "^2.1",
+        "monolog/monolog": "^1.20",
+        "php-console/php-console": "^3.1"
+    },
+    "autoload": {
+        "classmap": ["api/classes/"]
+    }
+}
